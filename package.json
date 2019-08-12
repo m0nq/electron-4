@@ -1,8 +1,10 @@
 {
   "name": "electron-4",
   "version": "0.1.0",
+  "description": "Project for Learning the Electron Framework",
   "private": true,
   "scripts": {
+    "start": "electron .",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
@@ -11,7 +13,10 @@
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps"
   },
-  "main": "background.js",
+  "main": "index.js",
+  "author": "Monk Wellington",
+  "license": "ISC",
+  "repository": "",
   "dependencies": {
     "core-js": "^2.6.5",
     "vue": "^2.6.6",
@@ -29,7 +34,7 @@
     "animate.css": "^3.7.0",
     "babel-eslint": "^10.0.1",
     "bootstrap": "^4.3.1",
-    "electron": "^4.0.0",
+    "electron": "^6.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "jquery": "^3.4.0",
