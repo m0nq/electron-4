@@ -32,8 +32,8 @@ const createWindow = () => {
       aboutWindow.show();
       setTimeout(() => {
         aboutWindow.hide();
-      }, 3000)
-    }, 1000)
+      }, 3000);
+    }, 1000);
   });
 
   aboutWindow.on('closed', () => {
