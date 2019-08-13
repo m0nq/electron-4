@@ -1,7 +1,7 @@
 const { app, BrowserWindow } = require('electron');
 
 const createWindow = () => {
-  let browserWindow = new BrowserWindow({
+  let appWindow = new BrowserWindow({
     width: 600,
     height: 800,
     center: true,
@@ -9,23 +9,31 @@ const createWindow = () => {
     show: false
   });
 
-  browserWindow.loadFile('./index.html');
+  appWindow.loadFile('./index.html');
 
-  browserWindow.on('closed', () => {
-    browserWindow = null;
+  appWindow.on('closed', () => {
+    appWindow = null;
   });
 
   let aboutWindow = new BrowserWindow({
     width: 300,
     height: 275,
-    frame: false
+    frame: false,
+    show: false
   });
 
   aboutWindow.loadFile('./about.html');
 
-  browserWindow.once('ready-to-show', () => {
-    browserWindow.show();
-    aboutWindow.show();
+  appWindow.once('ready-to-show', () => {
+    appWindow.maximize();
+    appWindow.show();
+
+    setTimeout(() => {
+      aboutWindow.show();
+      setTimeout(() => {
+        aboutWindow.hide();
+      }, 3000)
+    }, 1000)
   });
 
   aboutWindow.on('closed', () => {
