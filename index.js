@@ -1,21 +1,35 @@
 const { app, BrowserWindow } = require('electron');
 
 const createWindow = () => {
-  let win = new BrowserWindow({
+  let browserWindow = new BrowserWindow({
     width: 600,
     height: 800,
     center: true,
     minWidth: 300,
     show: false
   });
-  win.loadFile('./index.html');
 
-  win.on('closed', () => {
-    win = null;
+  browserWindow.loadFile('./index.html');
+
+  browserWindow.on('closed', () => {
+    browserWindow = null;
   });
 
-  win.once('ready-to-show', () => {
-    win.show();
+  let aboutWindow = new BrowserWindow({
+    width: 300,
+    height: 275,
+    frame: false
+  });
+
+  aboutWindow.loadFile('./about.html');
+
+  browserWindow.once('ready-to-show', () => {
+    browserWindow.show();
+    aboutWindow.show();
+  });
+
+  aboutWindow.on('closed', () => {
+    aboutWindow = null;
   });
 };
 
