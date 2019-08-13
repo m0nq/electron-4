@@ -18,7 +18,7 @@
   "license": "ISC",
   "repository": "",
   "dependencies": {
-    "core-js": "^2.6.5",
+    "core-js": "^3.2.1",
     "npm": "^6.10.3",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1"
@@ -31,12 +31,12 @@
     "@vue/cli-plugin-babel": "^3.5.0",
     "@vue/cli-plugin-eslint": "^3.5.0",
     "@vue/cli-service": "^3.5.0",
-    "@vue/eslint-config-prettier": "^4.0.1",
+    "@vue/eslint-config-prettier": "^5.0.0",
     "animate.css": "^3.7.0",
     "babel-eslint": "^10.0.1",
     "bootstrap": "^4.3.1",
     "electron": "^6.0.1",
-    "eslint": "^5.8.0",
+    "eslint": "^6.1.0",
     "eslint-plugin-vue": "^5.0.0",
     "jquery": "^3.4.0",
     "popper.js": "^1.15.0",
